@@ -2,7 +2,7 @@
 
 This is the harness for the IEEE SysCon 2027 paper *Certify, Don't Trust: Independent Quality Gates for Agent-Generated Functional Tests*. An LLM test agent writes functional tests from requirements. Six non-LLM gates then decide whether the suite counts as verification evidence.
 
-**Status:** release `v1.0-syscon2027`, the version submitted to IEEE SysCon 2027. The run records in `results/runs/` are the frozen data behind every table and figure in the paper.
+**Status:** release `v1.1-syscon2027`, the version cited in the IEEE SysCon 2027 submission (`v1.0-syscon2027` was the first public release). Supplementary tables are in `SUPPLEMENT.md`. The run records in `results/runs/` are the frozen data behind every table and figure in the paper.
 
 ## Reproduce the paper's numbers (no API key needed)
 ```bash

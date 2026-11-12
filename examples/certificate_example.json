@@ -1,0 +1,149 @@
+{
+ "schema": "certitest/certificate@1",
+ "subject": "s2/ledger/reference",
+ "issued_at": "2026-11-09T00:45:56+00:00",
+ "verdict": "CERTIFY",
+ "implementation_sha256": "abcef7ac58a19b907ee4be830d5469437c4ff0674fee9b7b1f2abc95d144e460",
+ "tests_sha256": "7baf650c565092abfd9730712e266029e960707a462c3dac69ca7c30be049162",
+ "toolchain": {
+  "python": "3.12.7",
+  "pytest": "9.2.0",
+  "certitest": "0.1.0"
+ },
+ "requirements": {
+  "R1": [
+   "test_open_account_supported_currencies_balance_zero",
+   "test_open_account_unsupported_currency"
+  ],
+  "R2": [
+   "test_exception_hierarchy",
+   "test_open_duplicate_account"
+  ],
+  "R3": [
+   "test_invalid_account_ids",
+   "test_valid_account_ids"
+  ],
+  "R4": [
+   "test_deposit_increases_balance",
+   "test_deposit_invalid_amount",
+   "test_exception_hierarchy",
+   "test_history_excludes_failed_operations",
+   "test_transfer_invalid_amount",
+   "test_withdraw_invalid_amount"
+  ],
+  "R5": [
+   "test_close_empty_account_and_never_reopen",
+   "test_deposit_does_not_create_account",
+   "test_exception_hierarchy",
+   "test_operations_on_closed_account",
+   "test_operations_on_unknown_account"
+  ],
+  "R6": [
+   "test_withdraw_decreases_balance",
+   "test_withdraw_invalid_amount"
+  ],
+  "R7": [
+   "test_exception_hierarchy",
+   "test_history_excludes_failed_operations",
+   "test_withdraw_exact_full_balance",
+   "test_withdraw_from_empty_account",
+   "test_withdraw_insufficient_funds"
+  ],
+  "R8": [
+   "test_failed_transfers_do_not_consume_ids",
+   "test_transfer_full_balance_allowed",
+   "test_transfer_invalid_amount",
+   "test_transfer_moves_money_and_ids_sequential",
+   "test_transfer_same_currency_non_usd"
+  ],
+  "R9": [
+   "test_exception_hierarchy",
+   "test_transfer_currency_mismatch",
+   "test_transfer_same_currency_non_usd"
+  ],
+  "R10": [
+   "test_transfer_to_self"
+  ],
+  "R11": [
+   "test_failed_transfer_does_not_reserve_key",
+   "test_failed_transfers_do_not_consume_ids",
+   "test_transfer_full_balance_allowed",
+   "test_transfer_insufficient_funds"
+  ],
+  "R12": [
+   "test_idempotent_replay_does_not_count_toward_limit",
+   "test_idempotent_replay_returns_same_id_no_money_moves"
+  ],
+  "R13": [
+   "test_exception_hierarchy",
+   "test_failed_transfer_does_not_reserve_key",
+   "test_idempotency_conflict"
+  ],
+  "R14": [
+   "test_daily_limit_combines_withdrawals_and_transfers",
+   "test_daily_limit_exact_allowed_then_exceeded",
+   "test_daily_limit_incoming_and_deposits_do_not_count",
+   "test_daily_limit_is_per_account",
+   "test_daily_limit_resets_on_new_day",
+   "test_daily_limit_single_operation_over",
+   "test_exception_hierarchy",
+   "test_idempotent_replay_does_not_count_toward_limit",
+   "test_initial_day_is_zero",
+   "test_limit_failure_leaves_history_unchanged"
+  ],
+  "R15": [
+   "test_exception_hierarchy",
+   "test_freeze_allows_incoming",
+   "test_freeze_blocks_outgoing",
+   "test_total_balance_includes_frozen"
+  ],
+  "R16": [
+   "test_unfreeze_restores_behaviour"
+  ],
+  "R17": [
+   "test_close_after_transfer_out",
+   "test_close_empty_account_and_never_reopen",
+   "test_close_non_empty_account",
+   "test_exception_hierarchy",
+   "test_operations_on_closed_account",
+   "test_total_balance_after_operations_and_close"
+  ],
+  "R18": [
+   "test_balance_returns_int",
+   "test_deposit_increases_balance",
+   "test_open_account_supported_currencies_balance_zero"
+  ],
+  "R19": [
+   "test_history_chronological",
+   "test_history_empty_for_new_account",
+   "test_history_excludes_failed_operations",
+   "test_history_not_mutated_externally",
+   "test_limit_failure_leaves_history_unchanged"
+  ],
+  "R20": [
+   "test_total_balance_after_operations_and_close",
+   "test_total_balance_includes_frozen",
+   "test_total_balance_no_accounts",
+   "test_total_balance_per_currency"
+  ]
+ },
+ "gates": {
+  "G1": {
+   "rc": 1.0
+  },
+  "G3": {
+   "k": 5,
+   "quarantined": []
+  },
+  "G4": {
+   "lint_rejected": [],
+   "mutation_score": 1.0,
+   "tau": 0.6
+  }
+ },
+ "residual_risk": {
+  "uncovered": [],
+  "surviving_mutants": []
+ },
+ "signature": "39c744733344635d38154798f3936a34bc858c58ae8f6725865ced084d8df25d"
+}
