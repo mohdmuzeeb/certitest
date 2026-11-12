@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.certitest_key
+.DS_Store
+# raw dataset: only the pinned .gz is versioned
+data/raw/*.jsonl
+# local logs and scratch outputs (contain request IDs and local paths)
+results/logs/
+results/build_s1.*
+results/partial_summary/
+results/smoke/
+.cache/

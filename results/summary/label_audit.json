@@ -1,0 +1,2779 @@
+{
+ "HumanEval/1::heldout-0": {
+  "n_mismatch": 87,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "['(()()) ((())) () ((())()())']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['() (()) ((())) (((())))']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['(()(())((())))']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['( ) (( )) (( )( ))']",
+    "got": "UnboundLocalError"
+   }
+  ]
+ },
+ "HumanEval/1::heldout-1": {
+  "n_mismatch": 86,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['(()()) ((())) () ((())()())']",
+    "expected": "['(()())', '((()))', '()', '((())()())']",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['() (()) ((())) (((())))']",
+    "expected": "['()', '(())', '((()))', '(((())))']",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['(()(())((())))']",
+    "expected": "['(()(())((())))']",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['( ) (( )) (( )( ))']",
+    "expected": "['()', '(())', '(()())']",
+    "got": "[]"
+   }
+  ]
+ },
+ "HumanEval/1::llm-faulty-0": {
+  "n_mismatch": 83,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['(()()) ((())) () ((())()())']",
+    "expected": "['(()())', '((()))', '()', '((())()())']",
+    "got": "['(()', '()']"
+   },
+   {
+    "kind": "value",
+    "input": "['() (()) ((())) (((())))']",
+    "expected": "['()', '(())', '((()))', '(((())))']",
+    "got": "['()', '(()']"
+   },
+   {
+    "kind": "value",
+    "input": "['(()(())((())))']",
+    "expected": "['(()(())((())))']",
+    "got": "['(()', '(()']"
+   },
+   {
+    "kind": "value",
+    "input": "['( ) (( )) (( )( ))']",
+    "expected": "['()', '(())', '(()())']",
+    "got": "['()', '(()']"
+   }
+  ]
+ },
+ "HumanEval/1::llm-faulty-1": {
+  "n_mismatch": 86,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['(()()) ((())) () ((())()())']",
+    "expected": "['(()())', '((()))', '()', '((())()())']",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['() (()) ((())) (((())))']",
+    "expected": "['()', '(())', '((()))', '(((())))']",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['(()(())((())))']",
+    "expected": "['(()(())((())))']",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['( ) (( )) (( )( ))']",
+    "expected": "['()', '(())', '(()())']",
+    "got": "[]"
+   }
+  ]
+ },
+ "HumanEval/10::heldout-0": {
+  "n_mismatch": 168,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['xyz']",
+    "expected": "'xyzyx'",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "['jerry']",
+    "expected": "'jerryrrej'",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "['race']",
+    "expected": "'racecar'",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "['rrefrerace']",
+    "expected": "'rrefreracecarerferr'",
+    "got": "None"
+   }
+  ]
+ },
+ "HumanEval/10::heldout-1": {
+  "n_mismatch": 32,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['']",
+    "expected": "''",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "['x']",
+    "expected": "'x'",
+    "got": "'xx'"
+   },
+   {
+    "kind": "value",
+    "input": "['xyx']",
+    "expected": "'xyx'",
+    "got": "'xyxxyx'"
+   },
+   {
+    "kind": "value",
+    "input": "['level']",
+    "expected": "'level'",
+    "got": "'levellevel'"
+   }
+  ]
+ },
+ "HumanEval/10::llm-faulty-0": {
+  "n_mismatch": 198,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['x']",
+    "expected": "'x'",
+    "got": "'xx'"
+   },
+   {
+    "kind": "value",
+    "input": "['xyz']",
+    "expected": "'xyzyx'",
+    "got": "'xz'"
+   },
+   {
+    "kind": "value",
+    "input": "['xyx']",
+    "expected": "'xyx'",
+    "got": "'xyxx'"
+   },
+   {
+    "kind": "value",
+    "input": "['jerry']",
+    "expected": "'jerryrrej'",
+    "got": "'jy'"
+   }
+  ]
+ },
+ "HumanEval/12::heldout-0": {
+  "n_mismatch": 198,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[['x', 'y', 'z']]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[['x', 'yyy', 'zzzz', 'www', 'kkkk', 'abc']]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[['', 'a', 'aa', 'aaa']]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[['123456789', '1234', '12345', '123']]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/12::heldout-1": {
+  "n_mismatch": 191,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[['x', 'yyy', 'zzzz', 'www', 'kkkk', 'abc']]",
+    "expected": "'zzzz'",
+    "got": "'x'"
+   },
+   {
+    "kind": "value",
+    "input": "[['', 'a', 'aa', 'aaa']]",
+    "expected": "'aaa'",
+    "got": "''"
+   },
+   {
+    "kind": "value",
+    "input": "[['123456789', '1234', '12345', '123']]",
+    "expected": "'123456789'",
+    "got": "'123'"
+   },
+   {
+    "kind": "value",
+    "input": "[['a', 'b', 'aa', 'bb']]",
+    "expected": "'aa'",
+    "got": "'a'"
+   }
+  ]
+ },
+ "HumanEval/12::llm-faulty-0": {
+  "n_mismatch": 168,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[['x', 'yyy', 'zzzz', 'www', 'kkkk', 'abc']]",
+    "expected": "'zzzz'",
+    "got": "'x'"
+   },
+   {
+    "kind": "value",
+    "input": "[['', 'a', 'aa', 'aaa']]",
+    "expected": "'aaa'",
+    "got": "''"
+   },
+   {
+    "kind": "value",
+    "input": "[['a', 'b', 'aa', 'bb']]",
+    "expected": "'aa'",
+    "got": "'a'"
+   },
+   {
+    "kind": "value",
+    "input": "[['dog', 'cat', 'horse', 'cow']]",
+    "expected": "'horse'",
+    "got": "'dog'"
+   }
+  ]
+ },
+ "HumanEval/17::heldout-0": {
+  "n_mismatch": 2,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['']",
+    "expected": "[]",
+    "got": "[None]"
+   },
+   {
+    "kind": "value",
+    "input": "['']",
+    "expected": "[]",
+    "got": "[None]"
+   }
+  ]
+ },
+ "HumanEval/17::llm-faulty-0": {
+  "n_mismatch": 191,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['.| .| .| .|']",
+    "expected": "[1, 1, 1, 1]",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['o| o| .| .| o o o o']",
+    "expected": "[2, 2, 1, 1, 4, 4, 4, 4]",
+    "got": "[4, 4, 4, 4, 4, 4]"
+   },
+   {
+    "kind": "value",
+    "input": "['o| .| o| .| o o| o o|']",
+    "expected": "[2, 1, 2, 1, 4, 2, 4, 2]",
+    "got": "[4, 4, 4, 4, 4, 4]"
+   },
+   {
+    "kind": "value",
+    "input": "['o o| o| o|']",
+    "expected": "[4, 2, 2, 2]",
+    "got": "[4, 4, 4, 4]"
+   }
+  ]
+ },
+ "HumanEval/17::llm-faulty-1": {
+  "n_mismatch": 198,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['o o o o']",
+    "expected": "[4, 4, 4, 4]",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['.| .| .| .|']",
+    "expected": "[1, 1, 1, 1]",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['o| o| .| .| o o o o']",
+    "expected": "[2, 2, 1, 1, 4, 4, 4, 4]",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "['o| .| o| .| o o| o o|']",
+    "expected": "[2, 1, 2, 1, 4, 2, 4, 2]",
+    "got": "[]"
+   }
+  ]
+ },
+ "HumanEval/26::heldout-0": {
+  "n_mismatch": 199,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3, 4]]",
+    "got": "KeyError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3, 2, 4, 3, 5]]",
+    "got": "KeyError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 1, 2, 2, 3, 3, 4, 4]]",
+    "got": "KeyError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3, 4, 5, 6, 7, 8, 9]]",
+    "got": "KeyError"
+   }
+  ]
+ },
+ "HumanEval/26::heldout-1": {
+  "n_mismatch": 199,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3, 4]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3, 2, 4, 3, 5]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 1, 2, 2, 3, 3, 4, 4]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3, 4, 5, 6, 7, 8, 9]]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/26::llm-faulty-0": {
+  "n_mismatch": 188,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3, 2, 4, 3, 5]]",
+    "expected": "[1, 4, 5]",
+    "got": "[1, 2, 3, 4, 5]"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 1, 2, 2, 3, 3, 4, 4]]",
+    "expected": "[]",
+    "got": "[1, 2, 3, 4]"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4]]",
+    "expected": "[]",
+    "got": "[1, 2, 3, 4]"
+   },
+   {
+    "kind": "value",
+    "input": "[[2, 2, 2, 2]]",
+    "expected": "[]",
+    "got": "[2]"
+   }
+  ]
+ },
+ "HumanEval/37::heldout-0": {
+  "n_mismatch": 148,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]]",
+    "expected": "[-10, 3, -5, 2, -3, 3, 5, 0, 9, 1, 123]",
+    "got": "[5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]"
+   },
+   {
+    "kind": "value",
+    "input": "[[5, 8, -12, 4, 23, 2, 3, 11, 12, -10]]",
+    "expected": "[-12, 8, 3, 4, 5, 2, 12, 11, 23, -10]",
+    "got": "[5, 8, -12, 4, 23, 2, 3, 11, 12, -10]"
+   },
+   {
+    "kind": "value",
+    "input": "[[3, 3, 2, 2, 1, 1]]",
+    "expected": "[1, 3, 2, 2, 3, 1]",
+    "got": "[3, 3, 2, 2, 1, 1]"
+   },
+   {
+    "kind": "value",
+    "input": "[[11, 7, 6, 9, 14, -1]]",
+    "expected": "[6, 7, 11, 9, 14, -1]",
+    "got": "[11, 7, 6, 9, 14, -1]"
+   }
+  ]
+ },
+ "HumanEval/37::heldout-1": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[5, 8, -12, 4, 23, 2, 3, 11, 12, -10]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[2, 6, 4, 8, 10]]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/37::llm-faulty-0": {
+  "n_mismatch": 148,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]]",
+    "expected": "[-10, 3, -5, 2, -3, 3, 5, 0, 9, 1, 123]",
+    "got": "[5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]"
+   },
+   {
+    "kind": "value",
+    "input": "[[5, 8, -12, 4, 23, 2, 3, 11, 12, -10]]",
+    "expected": "[-12, 8, 3, 4, 5, 2, 12, 11, 23, -10]",
+    "got": "[5, 8, -12, 4, 23, 2, 3, 11, 12, -10]"
+   },
+   {
+    "kind": "value",
+    "input": "[[3, 3, 2, 2, 1, 1]]",
+    "expected": "[1, 3, 2, 2, 3, 1]",
+    "got": "[3, 3, 2, 2, 1, 1]"
+   },
+   {
+    "kind": "value",
+    "input": "[[11, 7, 6, 9, 14, -1]]",
+    "expected": "[6, 7, 11, 9, 14, -1]",
+    "got": "[11, 7, 6, 9, 14, -1]"
+   }
+  ]
+ },
+ "HumanEval/37::llm-faulty-1": {
+  "n_mismatch": 199,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3]]",
+    "expected": "[1, 2, 3]",
+    "got": "[1, 2, 3, 1, 3]"
+   },
+   {
+    "kind": "value",
+    "input": "[[5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]]",
+    "expected": "[-10, 3, -5, 2, -3, 3, 5, 0, 9, 1, 123]",
+    "got": "[5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10, -10, -5, -3, 5, 9, 1"
+   },
+   {
+    "kind": "value",
+    "input": "[[5, 8, -12, 4, 23, 2, 3, 11, 12, -10]]",
+    "expected": "[-12, 8, 3, 4, 5, 2, 12, 11, 23, -10]",
+    "got": "[5, 8, -12, 4, 23, 2, 3, 11, 12, -10, -12, 3, 5, 12, 23]"
+   },
+   {
+    "kind": "value",
+    "input": "[[2, 6, 4, 8, 10]]",
+    "expected": "[2, 6, 4, 8, 10]",
+    "got": "[2, 6, 4, 8, 10, 2, 4, 10]"
+   }
+  ]
+ },
+ "HumanEval/38::heldout-0": {
+  "n_mismatch": 192,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['uzfplzjfzcltmdly']",
+    "expected": "'fuzzplzjftcllmdy'",
+    "got": "'uzfplzjfzcltmdlyplzjfzcltmdlyjfzcltmdlycltmdlymdlyy'"
+   },
+   {
+    "kind": "value",
+    "input": "['nzyegaghrzqwrdzxckn']",
+    "expected": "'ynzaegrghwzqzrdkxcn'",
+    "got": "'nzyegaghrzqwrdzxcknegaghrzqwrdzxcknghrzqwrdzxcknzqwrdzxcknr"
+   },
+   {
+    "kind": "value",
+    "input": "['zxolecqvzyausohgzdod']",
+    "expected": "'ozxclezqvuyahsodgzod'",
+    "got": "'zxolecqvzyausohgzdodlecqvzyausohgzdodqvzyausohgzdodyausohgz"
+   },
+   {
+    "kind": "value",
+    "input": "['cjhzuelsabstpbq']",
+    "expected": "'hcjezualstbsqpb'",
+    "got": "'cjhzuelsabstpbqzuelsabstpbqlsabstpbqbstpbqqpb'"
+   }
+  ]
+ },
+ "HumanEval/38::heldout-1": {
+  "n_mismatch": 194,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['uzfplzjfzcltmdly']",
+    "expected": "'fuzzplzjftcllmdy'",
+    "got": "'uzfplzjfzcltmdly'"
+   },
+   {
+    "kind": "value",
+    "input": "['nzyegaghrzqwrdzxckn']",
+    "expected": "'ynzaegrghwzqzrdkxcn'",
+    "got": "'nzyegaghrzqwrdzxckn'"
+   },
+   {
+    "kind": "value",
+    "input": "['zxolecqvzyausohgzdod']",
+    "expected": "'ozxclezqvuyahsodgzod'",
+    "got": "'zxolecqvzyausohgzdod'"
+   },
+   {
+    "kind": "value",
+    "input": "['cjhzuelsabstpbq']",
+    "expected": "'hcjezualstbsqpb'",
+    "got": "'cjhzuelsabstpbq'"
+   }
+  ]
+ },
+ "HumanEval/38::llm-faulty-0": {
+  "n_mismatch": 196,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['uzfplzjfzcltmdly']",
+    "expected": "'fuzzplzjftcllmdy'",
+    "got": "'uzfplzjfzcltmdly'"
+   },
+   {
+    "kind": "value",
+    "input": "['nzyegaghrzqwrdzxckn']",
+    "expected": "'ynzaegrghwzqzrdkxcn'",
+    "got": "'nzyegaghrzqwrdzxckn'"
+   },
+   {
+    "kind": "value",
+    "input": "['zxolecqvzyausohgzdod']",
+    "expected": "'ozxclezqvuyahsodgzod'",
+    "got": "'zxolecqvzyausohgzddo'"
+   },
+   {
+    "kind": "value",
+    "input": "['cjhzuelsabstpbq']",
+    "expected": "'hcjezualstbsqpb'",
+    "got": "'cjhzuelsabstpbq'"
+   }
+  ]
+ },
+ "HumanEval/40::heldout-0": {
+  "n_mismatch": 48,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[1, 3, 5, 0]]",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 3, 5, -1]]",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3, 7]]",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 2, 5, 7]]",
+    "expected": "False",
+    "got": "True"
+   }
+  ]
+ },
+ "HumanEval/40::heldout-1": {
+  "n_mismatch": 148,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[1, 3, -2, 1]]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[[2, 4, -5, 3, 9, 7]]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[[0, 0, 0]]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 1, -2, -2]]",
+    "expected": "True",
+    "got": "False"
+   }
+  ]
+ },
+ "HumanEval/40::llm-faulty-0": {
+  "n_mismatch": 115,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[1, 3, 5, 0]]",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 3, -2, 1]]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[[2, 4, -5, 3, 9, 7]]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 1, -2, -2]]",
+    "expected": "True",
+    "got": "False"
+   }
+  ]
+ },
+ "HumanEval/41::llm-faulty-0": {
+  "n_mismatch": 83,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[2]",
+    "expected": "4",
+    "got": "12"
+   },
+   {
+    "kind": "value",
+    "input": "[3]",
+    "expected": "9",
+    "got": "24"
+   },
+   {
+    "kind": "value",
+    "input": "[4]",
+    "expected": "16",
+    "got": "40"
+   },
+   {
+    "kind": "value",
+    "input": "[8]",
+    "expected": "64",
+    "got": "144"
+   }
+  ]
+ },
+ "HumanEval/41::llm-faulty-1": {
+  "n_mismatch": 82,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[2]",
+    "expected": "4",
+    "got": "2"
+   },
+   {
+    "kind": "value",
+    "input": "[3]",
+    "expected": "9",
+    "got": "3"
+   },
+   {
+    "kind": "value",
+    "input": "[4]",
+    "expected": "16",
+    "got": "4"
+   },
+   {
+    "kind": "value",
+    "input": "[8]",
+    "expected": "64",
+    "got": "8"
+   }
+  ]
+ },
+ "HumanEval/46::heldout-0": {
+  "n_mismatch": 136,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[5]",
+    "expected": "4",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "[8]",
+    "expected": "28",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "[10]",
+    "expected": "104",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "[12]",
+    "expected": "386",
+    "got": "None"
+   }
+  ]
+ },
+ "HumanEval/46::llm-faulty-0": {
+  "n_mismatch": 131,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[5]",
+    "expected": "4",
+    "got": "2"
+   },
+   {
+    "kind": "value",
+    "input": "[8]",
+    "expected": "28",
+    "got": "16"
+   },
+   {
+    "kind": "value",
+    "input": "[10]",
+    "expected": "104",
+    "got": "58"
+   },
+   {
+    "kind": "value",
+    "input": "[12]",
+    "expected": "386",
+    "got": "216"
+   }
+  ]
+ },
+ "HumanEval/48::llm-faulty-0": {
+  "n_mismatch": 15,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['never odd or even']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['Was it a car or a cat I saw?']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['never odd or  even']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['never odd or e ven']",
+    "expected": "False",
+    "got": "True"
+   }
+  ]
+ },
+ "HumanEval/48::llm-faulty-1": {
+  "n_mismatch": 2,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['Rats live on no evil star']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['Step on no pets']",
+    "expected": "False",
+    "got": "True"
+   }
+  ]
+ },
+ "HumanEval/5::heldout-0": {
+  "n_mismatch": 149,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[5, 6, 3, 2], 8]",
+    "expected": "[5, 8, 6, 8, 3, 8, 2]",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "[[2, 2, 2], 2]",
+    "expected": "[2, 2, 2, 2, 2]",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3], 0]",
+    "expected": "[1, 0, 2, 0, 3]",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "[[2, 4, 6, 8], 1]",
+    "expected": "[2, 1, 4, 1, 6, 1, 8]",
+    "got": "[]"
+   }
+  ]
+ },
+ "HumanEval/5::heldout-1": {
+  "n_mismatch": 156,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[], 7]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[5, 6, 3, 2], 8]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[2, 2, 2], 2]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3], 0]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/5::llm-faulty-0": {
+  "n_mismatch": 133,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[5, 6, 3, 2], 8]",
+    "expected": "[5, 8, 6, 8, 3, 8, 2]",
+    "got": "[5, 6, 8, 3, 8, 2, 8]"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3], 0]",
+    "expected": "[1, 0, 2, 0, 3]",
+    "got": "[1, 2, 0, 3, 0]"
+   },
+   {
+    "kind": "value",
+    "input": "[[2, 4, 6, 8], 1]",
+    "expected": "[2, 1, 4, 1, 6, 1, 8]",
+    "got": "[2, 4, 1, 6, 1, 8, 1]"
+   },
+   {
+    "kind": "value",
+    "input": "[[9, 9, 9, 9, 9, 9], 7]",
+    "expected": "[9, 7, 9, 7, 9, 7, 9, 7, 9, 7, 9]",
+    "got": "[9, 9, 7, 9, 7, 9, 7, 9, 7, 9, 7]"
+   }
+  ]
+ },
+ "HumanEval/5::llm-faulty-1": {
+  "n_mismatch": 149,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[5, 6, 3, 2], 8]",
+    "got": "IndexError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[2, 2, 2], 2]",
+    "got": "IndexError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3], 0]",
+    "got": "IndexError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[2, 4, 6, 8], 1]",
+    "got": "IndexError"
+   }
+  ]
+ },
+ "HumanEval/50::llm-faulty-0": {
+  "n_mismatch": 199,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['tantywccpjkimslotpzs']",
+    "expected": "'oviotrxxkefdhngjokun'",
+    "got": "'tantywccpjkimslotpzs'"
+   },
+   {
+    "kind": "value",
+    "input": "['clknfxdnox']",
+    "expected": "'xgfiasyijs'",
+    "got": "'clknfxdnox'"
+   },
+   {
+    "kind": "value",
+    "input": "['dtzqyosaovdbafbg']",
+    "expected": "'youltjnvjqywvawb'",
+    "got": "'dtzqyosaovdbafbg'"
+   },
+   {
+    "kind": "value",
+    "input": "['dffjvztknohzf']",
+    "expected": "'yaaequofijcua'",
+    "got": "'dffjvztknohzf'"
+   }
+  ]
+ },
+ "HumanEval/50::llm-faulty-1": {
+  "n_mismatch": 199,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['tantywccpjkimslotpzs']",
+    "expected": "'oviotrxxkefdhngjokun'",
+    "got": "'xeuytqxrnpouhhbdysfy'"
+   },
+   {
+    "kind": "value",
+    "input": "['clknfxdnox']",
+    "expected": "'xgfiasyijs'",
+    "got": "'ctsickspqh'"
+   },
+   {
+    "kind": "value",
+    "input": "['dtzqyosaovdbafbg']",
+    "expected": "'youltjnvjqywvawb'",
+    "got": "'lgkfgiatfxtdveyi'"
+   },
+   {
+    "kind": "value",
+    "input": "['dffjvztknohzf']",
+    "expected": "'yaaequofijcua'",
+    "got": "'kemtspyeaokki'"
+   }
+  ]
+ },
+ "HumanEval/55::heldout-0": {
+  "n_mismatch": 44,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[10]",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "[8]",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "[11]",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "[12]",
+    "got": "UnboundLocalError"
+   }
+  ]
+ },
+ "HumanEval/55::heldout-1": {
+  "n_mismatch": 2,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[0]",
+    "expected": "0",
+    "got": "1"
+   },
+   {
+    "kind": "value",
+    "input": "[False]",
+    "expected": "0",
+    "got": "1"
+   }
+  ]
+ },
+ "HumanEval/55::llm-faulty-0": {
+  "n_mismatch": 2,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[0]",
+    "got": "ValueError"
+   },
+   {
+    "kind": "exception",
+    "input": "[False]",
+    "got": "ValueError"
+   }
+  ]
+ },
+ "HumanEval/55::llm-faulty-1": {
+  "n_mismatch": 19,
+  "kinds": [
+   "timeout"
+  ],
+  "performance_only": true,
+  "examples": [
+   {
+    "kind": "timeout",
+    "input": "[63]"
+   },
+   {
+    "kind": "timeout",
+    "input": "[64]"
+   },
+   {
+    "kind": "timeout",
+    "input": "[71]"
+   },
+   {
+    "kind": "timeout",
+    "input": "[72]"
+   }
+  ]
+ },
+ "HumanEval/56::heldout-0": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "['<>']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['<<><>>']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['<><><<><>><>']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['<><><<<><><>><>><<><><<>>>']",
+    "got": "UnboundLocalError"
+   }
+  ]
+ },
+ "HumanEval/56::heldout-1": {
+  "n_mismatch": 191,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['<<<><>>>>']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['><<>']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['<']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['<<<<']",
+    "expected": "False",
+    "got": "True"
+   }
+  ]
+ },
+ "HumanEval/56::llm-faulty-0": {
+  "n_mismatch": 191,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['<<<><>>>>']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['><<>']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['<']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['<<<<']",
+    "expected": "False",
+    "got": "True"
+   }
+  ]
+ },
+ "HumanEval/61::heldout-0": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "['()']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['(()())']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['()()(()())()']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['()()((()()())())(()()(()))']",
+    "got": "UnboundLocalError"
+   }
+  ]
+ },
+ "HumanEval/61::heldout-1": {
+  "n_mismatch": 182,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['((()())))']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "[')(()']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['(']",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "['((((']",
+    "expected": "False",
+    "got": "True"
+   }
+  ]
+ },
+ "HumanEval/61::llm-faulty-0": {
+  "n_mismatch": 23,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['()']",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "['(()())']",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "['()()(()())()']",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "['()()((()()())())(()()(()))']",
+    "expected": "True",
+    "got": "False"
+   }
+  ]
+ },
+ "HumanEval/63::heldout-0": {
+  "n_mismatch": 63,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[5]",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "[8]",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "[10]",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "[12]",
+    "got": "UnboundLocalError"
+   }
+  ]
+ },
+ "HumanEval/63::heldout-1": {
+  "n_mismatch": 5,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[1]",
+    "expected": "0",
+    "got": "1"
+   },
+   {
+    "kind": "value",
+    "input": "[0]",
+    "expected": "0",
+    "got": "1"
+   },
+   {
+    "kind": "value",
+    "input": "[1]",
+    "expected": "0",
+    "got": "1"
+   },
+   {
+    "kind": "value",
+    "input": "[False]",
+    "expected": "0",
+    "got": "1"
+   }
+  ]
+ },
+ "HumanEval/63::llm-faulty-0": {
+  "n_mismatch": 34,
+  "kinds": [
+   "timeout"
+  ],
+  "performance_only": true,
+  "examples": [
+   {
+    "kind": "timeout",
+    "input": "[57]"
+   },
+   {
+    "kind": "timeout",
+    "input": "[56]"
+   },
+   {
+    "kind": "timeout",
+    "input": "[58]"
+   },
+   {
+    "kind": "timeout",
+    "input": "[60]"
+   }
+  ]
+ },
+ "HumanEval/64::heldout-0": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "['abcde']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['Alone']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['key']",
+    "got": "UnboundLocalError"
+   },
+   {
+    "kind": "exception",
+    "input": "['bye']",
+    "got": "UnboundLocalError"
+   }
+  ]
+ },
+ "HumanEval/64::heldout-1": {
+  "n_mismatch": 99,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['key']",
+    "expected": "2",
+    "got": "1"
+   },
+   {
+    "kind": "value",
+    "input": "['keY']",
+    "expected": "2",
+    "got": "1"
+   },
+   {
+    "kind": "value",
+    "input": "['ACEDY']",
+    "expected": "3",
+    "got": "2"
+   },
+   {
+    "kind": "value",
+    "input": "['candy']",
+    "expected": "2",
+    "got": "1"
+   }
+  ]
+ },
+ "HumanEval/64::llm-faulty-0": {
+  "n_mismatch": 136,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['bye']",
+    "expected": "1",
+    "got": "2"
+   },
+   {
+    "kind": "value",
+    "input": "['bYe']",
+    "expected": "1",
+    "got": "2"
+   },
+   {
+    "kind": "value",
+    "input": "['aeiouyaeiouy']",
+    "expected": "11",
+    "got": "12"
+   },
+   {
+    "kind": "value",
+    "input": "['glumonkeye']",
+    "expected": "4",
+    "got": "5"
+   }
+  ]
+ },
+ "HumanEval/64::llm-faulty-1": {
+  "n_mismatch": 191,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['abcde']",
+    "expected": "2",
+    "got": "3"
+   },
+   {
+    "kind": "value",
+    "input": "['Alone']",
+    "expected": "3",
+    "got": "4"
+   },
+   {
+    "kind": "value",
+    "input": "['key']",
+    "expected": "2",
+    "got": "3"
+   },
+   {
+    "kind": "value",
+    "input": "['bye']",
+    "expected": "1",
+    "got": "3"
+   }
+  ]
+ },
+ "HumanEval/67::heldout-0": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "['5 apples and 6 oranges', 19]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "['5 apples and 6 oranges', 21]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "['0 apples and 1 oranges', 3]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "['1 apples and 0 oranges', 3]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/67::heldout-1": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "['5 apples and 6 oranges', 19]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "['5 apples and 6 oranges', 21]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "['0 apples and 1 oranges', 3]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "['1 apples and 0 oranges', 3]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/67::llm-faulty-0": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "['5 apples and 6 oranges', 19]",
+    "got": "ValueError"
+   },
+   {
+    "kind": "exception",
+    "input": "['5 apples and 6 oranges', 21]",
+    "got": "ValueError"
+   },
+   {
+    "kind": "exception",
+    "input": "['0 apples and 1 oranges', 3]",
+    "got": "ValueError"
+   },
+   {
+    "kind": "exception",
+    "input": "['1 apples and 0 oranges', 3]",
+    "got": "ValueError"
+   }
+  ]
+ },
+ "HumanEval/68::heldout-0": {
+  "n_mismatch": 182,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[4, 2, 3]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[5, 0, 3, 0, 4, 2]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3, 0, 5, 3]]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/68::heldout-1": {
+  "n_mismatch": 182,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[4, 2, 3]]",
+    "expected": "[2, 1]",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3]]",
+    "expected": "[2, 1]",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "[[5, 0, 3, 0, 4, 2]]",
+    "expected": "[0, 1]",
+    "got": "None"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3, 0, 5, 3]]",
+    "expected": "[0, 3]",
+    "got": "None"
+   }
+  ]
+ },
+ "HumanEval/68::llm-faulty-0": {
+  "n_mismatch": 69,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[4, 2, 3]]",
+    "expected": "[2, 1]",
+    "got": "[2, 0]"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3, 0, 5, 3]]",
+    "expected": "[0, 3]",
+    "got": "[0, 1]"
+   },
+   {
+    "kind": "value",
+    "input": "[[7, 15, 12, 21, 8, 13]]",
+    "expected": "[8, 4]",
+    "got": "[8, 2]"
+   },
+   {
+    "kind": "value",
+    "input": "[[6, 4, 2, 0, 8, 10]]",
+    "expected": "[0, 3]",
+    "got": "[0, 0]"
+   }
+  ]
+ },
+ "HumanEval/69::heldout-0": {
+  "n_mismatch": 180,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[5, 5, 5, 5, 1]]",
+    "expected": "1",
+    "got": "-1"
+   },
+   {
+    "kind": "value",
+    "input": "[[4, 1, 4, 1, 4, 4]]",
+    "expected": "4",
+    "got": "-1"
+   },
+   {
+    "kind": "value",
+    "input": "[[8, 8, 8, 8, 8, 8, 8, 8]]",
+    "expected": "8",
+    "got": "-1"
+   },
+   {
+    "kind": "value",
+    "input": "[[2, 3, 3, 2, 2]]",
+    "expected": "2",
+    "got": "-1"
+   }
+  ]
+ },
+ "HumanEval/69::heldout-1": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[5, 5, 5, 5, 1]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[4, 1, 4, 1, 4, 4]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[3, 3]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[8, 8, 8, 8, 8, 8, 8, 8]]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/69::llm-faulty-0": {
+  "n_mismatch": 102,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[9, 2, 4, 1, 5, 1, 5, 2, 5, 7, 7, 7, 3, 10, 1, 5, 4, 2, 8, 4, 1, 9, 10, 7, 10, ",
+    "expected": "4",
+    "got": "2"
+   },
+   {
+    "kind": "value",
+    "input": "[[2, 6, 4, 2, 8, 7, 5, 6, 4, 10, 4, 6, 3, 7, 8, 8, 3, 1, 4, 2, 2, 10, 7]]",
+    "expected": "4",
+    "got": "2"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5]]",
+    "expected": "3",
+    "got": "1"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 4, 4, 4, 4]]",
+    "expected": "4",
+    "got": "1"
+   }
+  ]
+ },
+ "HumanEval/73::heldout-0": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3, 5, 4, 7, 9, 6]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 2, 3, 4, 3, 2, 2]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 4, 2]]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[1, 4, 4, 2]]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/73::heldout-1": {
+  "n_mismatch": 184,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3, 5, 4, 7, 9, 6]]",
+    "expected": "4",
+    "got": "0"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3, 4, 3, 2, 2]]",
+    "expected": "1",
+    "got": "0"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 4, 2]]",
+    "expected": "1",
+    "got": "0"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 4, 4, 2]]",
+    "expected": "1",
+    "got": "0"
+   }
+  ]
+ },
+ "HumanEval/73::llm-faulty-0": {
+  "n_mismatch": 186,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3, 5, 4, 7, 9, 6]]",
+    "expected": "4",
+    "got": "17"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 2, 3, 4, 3, 2, 2]]",
+    "expected": "1",
+    "got": "11"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 4, 2]]",
+    "expected": "1",
+    "got": "5"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 4, 4, 2]]",
+    "expected": "1",
+    "got": "5"
+   }
+  ]
+ },
+ "HumanEval/74::heldout-0": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[], []]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[['hi', 'admin'], ['hi', 'hi']]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[['hi', 'admin'], ['hi', 'hi', 'admin', 'project']]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[['4'], ['1', '2', '3', '4', '5']]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/74::llm-faulty-0": {
+  "n_mismatch": 9,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[['hi', 'admin'], ['hI', 'hi', 'hii']]",
+    "expected": "['hi', 'admin']",
+    "got": "['hI', 'hi', 'hii']"
+   },
+   {
+    "kind": "value",
+    "input": "[['happy', 'birthday', 'sarah'], ['happy', 'birthday', 'sally']]",
+    "expected": "['happy', 'birthday', 'sarah']",
+    "got": "['happy', 'birthday', 'sally']"
+   },
+   {
+    "kind": "value",
+    "input": "[['hello', 'world'], ['cathi', 'there']]",
+    "expected": "['hello', 'world']",
+    "got": "['cathi', 'there']"
+   },
+   {
+    "kind": "value",
+    "input": "[['world'], ['there']]",
+    "expected": "['world']",
+    "got": "['there']"
+   }
+  ]
+ },
+ "HumanEval/75::heldout-0": {
+  "n_mismatch": 16,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[30]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[8]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[99]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[98]",
+    "expected": "True",
+    "got": "False"
+   }
+  ]
+ },
+ "HumanEval/75::heldout-1": {
+  "n_mismatch": 65,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[5]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[30]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[8]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[10]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/75::llm-faulty-0": {
+  "n_mismatch": 25,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[30]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[8]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[10]",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "[33]",
+    "expected": "False",
+    "got": "True"
+   }
+  ]
+ },
+ "HumanEval/75::llm-faulty-1": {
+  "n_mismatch": 15,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[8]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[99]",
+    "expected": "True",
+    "got": "False"
+   },
+   {
+    "kind": "value",
+    "input": "[90]",
+    "expected": "False",
+    "got": "True"
+   },
+   {
+    "kind": "value",
+    "input": "[98]",
+    "expected": "True",
+    "got": "False"
+   }
+  ]
+ },
+ "HumanEval/77::heldout-0": {
+  "n_mismatch": 73,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[-1]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[-1]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[-8]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[-27]",
+    "got": "TypeError"
+   }
+  ]
+ },
+ "HumanEval/77::heldout-1": {
+  "n_mismatch": 73,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[-1]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[-1]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[-8]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[-27]",
+    "got": "TypeError"
+   }
+  ]
+ },
+ "HumanEval/77::llm-faulty-0": {
+  "n_mismatch": 73,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[-1]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[-1]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[-8]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[-27]",
+    "got": "TypeError"
+   }
+  ]
+ },
+ "HumanEval/81::llm-faulty-0": {
+  "n_mismatch": 191,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[4.0, 3, 1.7, 2, 3.5]]",
+    "expected": "['A+', 'B', 'C-', 'C', 'A-']",
+    "got": "['A+', 'B+', 'C', 'C+', None]"
+   },
+   {
+    "kind": "value",
+    "input": "[[1.2]]",
+    "expected": "['D+']",
+    "got": "[None]"
+   },
+   {
+    "kind": "value",
+    "input": "[[0.5]]",
+    "expected": "['D-']",
+    "got": "[None]"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 0.3, 1.5, 2.8, 3.3]]",
+    "expected": "['D', 'D-', 'C-', 'B', 'B+']",
+    "got": "['D+', None, None, None, 'A-']"
+   }
+  ]
+ },
+ "HumanEval/81::llm-faulty-1": {
+  "n_mismatch": 179,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[4.0, 3, 1.7, 2, 3.5]]",
+    "expected": "['A+', 'B', 'C-', 'C', 'A-']",
+    "got": "['A+', 'B+', 'C', 'C+', 'A-']"
+   },
+   {
+    "kind": "value",
+    "input": "[[0.0]]",
+    "expected": "['E']",
+    "got": "['D-']"
+   },
+   {
+    "kind": "value",
+    "input": "[[1, 0.3, 1.5, 2.8, 3.3]]",
+    "expected": "['D', 'D-', 'C-', 'B', 'B+']",
+    "got": "['D+', 'D-', 'C-', 'B', 'A-']"
+   },
+   {
+    "kind": "value",
+    "input": "[[0, 0.7]]",
+    "expected": "['E', 'D-']",
+    "got": "['D-', 'D']"
+   }
+  ]
+ },
+ "HumanEval/83::heldout-0": {
+  "n_mismatch": 1,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[1]",
+    "expected": "1",
+    "got": "1.8"
+   }
+  ]
+ },
+ "HumanEval/83::llm-faulty-0": {
+  "n_mismatch": 109,
+  "kinds": [
+   "exception",
+   "timeout",
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[1]",
+    "expected": "1",
+    "got": "9"
+   },
+   {
+    "kind": "value",
+    "input": "[2]",
+    "expected": "18",
+    "got": "810"
+   },
+   {
+    "kind": "value",
+    "input": "[3]",
+    "expected": "180",
+    "got": "729000"
+   },
+   {
+    "kind": "value",
+    "input": "[4]",
+    "expected": "1800",
+    "got": "6561000000"
+   }
+  ]
+ },
+ "HumanEval/83::llm-faulty-1": {
+  "n_mismatch": 109,
+  "kinds": [
+   "exception",
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[1]",
+    "expected": "1",
+    "got": "1.8888888888888888"
+   },
+   {
+    "kind": "value",
+    "input": "[2]",
+    "expected": "18",
+    "got": "17"
+   },
+   {
+    "kind": "value",
+    "input": "[3]",
+    "expected": "180",
+    "got": "153"
+   },
+   {
+    "kind": "value",
+    "input": "[4]",
+    "expected": "1800",
+    "got": "1377"
+   }
+  ]
+ },
+ "HumanEval/84::heldout-0": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[1000]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[150]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[147]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[333]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/84::llm-faulty-0": {
+  "n_mismatch": 195,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[1000]",
+    "expected": "'1'",
+    "got": "'110'"
+   },
+   {
+    "kind": "value",
+    "input": "[150]",
+    "expected": "'110'",
+    "got": "'100'"
+   },
+   {
+    "kind": "value",
+    "input": "[147]",
+    "expected": "'1100'",
+    "got": "'100'"
+   },
+   {
+    "kind": "value",
+    "input": "[333]",
+    "expected": "'1001'",
+    "got": "'101'"
+   }
+  ]
+ },
+ "HumanEval/84::llm-faulty-1": {
+  "n_mismatch": 199,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[1000]",
+    "expected": "'1'",
+    "got": "'6'"
+   },
+   {
+    "kind": "value",
+    "input": "[150]",
+    "expected": "'110'",
+    "got": "'4'"
+   },
+   {
+    "kind": "value",
+    "input": "[147]",
+    "expected": "'1100'",
+    "got": "'4'"
+   },
+   {
+    "kind": "value",
+    "input": "[333]",
+    "expected": "'1001'",
+    "got": "'5'"
+   }
+  ]
+ },
+ "HumanEval/86::heldout-0": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "['Hi']",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "['hello']",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "['number']",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "['abcd']",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/86::heldout-1": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "['Hi']",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "['hello']",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "['number']",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "['abcd']",
+    "got": "TypeError"
+   }
+  ]
+ },
+ "HumanEval/86::llm-faulty-0": {
+  "n_mismatch": 11,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "['\\n\\n123 456\\n789\\n']",
+    "expected": "'\\n\\n123 \\n\\n456789'",
+    "got": "'123 456 789'"
+   },
+   {
+    "kind": "value",
+    "input": "['56\\n789\\n']",
+    "expected": "'\\n\\n56789'",
+    "got": "'56 789'"
+   },
+   {
+    "kind": "value",
+    "input": "['\\n\\n1232 456\\n789\\n']",
+    "expected": "'\\n\\n1223 \\n\\n456789'",
+    "got": "'1223 456 789'"
+   },
+   {
+    "kind": "value",
+    "input": "['\\n\\n5123 456\\n789\\n']",
+    "expected": "'\\n\\n1235 \\n\\n456789'",
+    "got": "'1235 456 789'"
+   }
+  ]
+ },
+ "HumanEval/87::heldout-0": {
+  "n_mismatch": 65,
+  "kinds": [
+   "value"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "value",
+    "input": "[[[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 1, 6], [1, 2, 3, 4, 5, 1]], 1]",
+    "expected": "[(0, 0), (1, 4), (1, 0), (2, 5), (2, 0)]",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "[[[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]",
+    "expected": "[(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1)]",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "[[[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [1, 1, 3, 4, 5, 6], [1, 2, 1, 4, 5, 6]",
+    "expected": "[(0, 0), (1, 0), (2, 1), (2, 0), (3, 2), (3, 0), (4, 3), (4,",
+    "got": "[]"
+   },
+   {
+    "kind": "value",
+    "input": "[[[], [1], [1, 2, 3]], 3]",
+    "expected": "[(2, 2)]",
+    "got": "[]"
+   }
+  ]
+ },
+ "HumanEval/87::heldout-1": {
+  "n_mismatch": 200,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 1, 6], [1, 2, 3, 4, 5, 1]], 1]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [1, 1, 3, 4, 5, 6], [1, 2, 1, 4, 5, 6]",
+    "got": "NameError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[], 1]",
+    "got": "NameError"
+   }
+  ]
+ },
+ "HumanEval/87::llm-faulty-0": {
+  "n_mismatch": 65,
+  "kinds": [
+   "exception"
+  ],
+  "performance_only": false,
+  "examples": [
+   {
+    "kind": "exception",
+    "input": "[[[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 1, 6], [1, 2, 3, 4, 5, 1]], 1]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[[1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6], [1, 1, 3, 4, 5, 6], [1, 2, 1, 4, 5, 6]",
+    "got": "TypeError"
+   },
+   {
+    "kind": "exception",
+    "input": "[[[], [1], [1, 2, 3]], 3]",
+    "got": "TypeError"
+   }
+  ]
+ }
+}

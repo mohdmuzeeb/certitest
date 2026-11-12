@@ -1,0 +1,10 @@
+[project]
+name = "certitest"
+version = "1.0.0"
+description = "Independent quality gates for agent-generated functional tests"
+requires-python = ">=3.11"
+dependencies = ["anthropic>=2.0", "pytest>=8"]
+license = {text = "Apache-2.0"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
